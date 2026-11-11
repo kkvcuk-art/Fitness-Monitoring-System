@@ -1,0 +1,630 @@
+@import "./HealthHistory.css";
+
+/* ==================== PAGE HEADERS ==================== */
+
+.add-history-page-header,
+.history-details-header {
+  margin-bottom: 24px;
+  padding: 38px;
+
+  border: 1px solid #d5e1f1;
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 92% 15%,
+      rgba(124, 58, 237, 0.1),
+      transparent 28%
+    ),
+    #ffffff;
+}
+
+.history-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.add-history-back-link {
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  color: #6d28d9;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-history-back-link:hover {
+  text-decoration: underline;
+}
+
+.add-history-page-header h2,
+.history-details-header h2 {
+  margin-top: 25px;
+  color: #101828;
+
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.1;
+}
+
+.add-history-page-header p,
+.history-details-header p {
+  max-width: 650px;
+  margin-top: 14px;
+  color: #667085;
+
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+/* ==================== MESSAGES ==================== */
+
+.add-history-error,
+.add-history-warning {
+  margin-bottom: 24px;
+  padding: 17px 20px;
+
+  border-radius: 13px;
+
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.add-history-error {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+.add-history-warning {
+  border: 1px solid #fedf89;
+  background: #fffaeb;
+  color: #b54708;
+}
+
+/* ==================== FORM ==================== */
+
+.add-history-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.add-history-card,
+.add-history-actions,
+.history-details-card,
+.history-details-actions {
+  padding: 32px;
+
+  border: 1px solid #d5e1f1;
+  border-radius: 20px;
+  background: #ffffff;
+
+  box-shadow: 0 16px 40px rgba(44, 62, 100, 0.04);
+}
+
+.add-history-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.add-history-section-heading > span {
+  width: 43px;
+  height: 43px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  border-radius: 11px;
+  background: #efe8ff;
+  color: #6d28d9;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.add-history-section-heading h3 {
+  color: #182230;
+  font-size: 1rem;
+}
+
+.add-history-section-heading p {
+  margin-top: 6px;
+  color: #718096;
+
+  font-size: 0.73rem;
+  line-height: 1.5;
+}
+
+.add-history-divider {
+  height: 1px;
+  margin: 25px 0;
+  background: #e4eaf3;
+}
+
+.add-history-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.add-history-field {
+  min-width: 0;
+}
+
+.add-history-field-full {
+  grid-column: 1 / -1;
+}
+
+.add-history-field > label {
+  display: block;
+  margin-bottom: 9px;
+  color: #344054;
+
+  font-size: 0.73rem;
+  font-weight: 750;
+}
+
+.add-history-field input,
+.add-history-field select,
+.add-history-field textarea {
+  width: 100%;
+
+  border: 1px solid #d5e1f1;
+  border-radius: 12px;
+  outline: none;
+
+  background: #f7f9fd;
+  color: #344054;
+
+  font: inherit;
+  font-size: 0.79rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.add-history-field input,
+.add-history-field select {
+  min-height: 54px;
+  padding: 0 16px;
+}
+
+.add-history-field textarea {
+  min-height: 120px;
+  padding: 15px 16px;
+
+  line-height: 1.65;
+  resize: vertical;
+}
+
+.add-history-field input::placeholder,
+.add-history-field textarea::placeholder {
+  color: #98a2b3;
+}
+
+.add-history-field input:focus,
+.add-history-field select:focus,
+.add-history-field textarea:focus {
+  border-color: #a78bfa;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(109, 40, 217, 0.08);
+}
+
+.add-history-field input:disabled,
+.add-history-field select:disabled,
+.add-history-field textarea:disabled {
+  background: #f2f4f7;
+  color: #98a2b3;
+  cursor: not-allowed;
+}
+
+/* ==================== HEREDITARY CHECKBOX ==================== */
+
+.add-history-field .add-history-checkbox {
+  min-height: 58px;
+  margin: 0;
+  padding: 15px 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid #ddd2f7;
+  border-radius: 12px;
+  background: #faf8ff;
+  color: #4c3c72;
+
+  font-size: 0.76rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.add-history-checkbox input {
+  width: 18px;
+  height: 18px;
+  min-height: auto;
+  padding: 0;
+  flex-shrink: 0;
+
+  accent-color: #6d28d9;
+  cursor: pointer;
+}
+
+/* ==================== FORM ACTIONS ==================== */
+
+.add-history-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 13px;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.add-history-cancel-button,
+.add-history-submit-button {
+  min-height: 50px;
+  padding: 0 21px;
+
+  border-radius: 11px;
+
+  font-size: 0.76rem;
+  font-weight: 750;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-history-cancel-button {
+  border: 1px solid #d5e1f1;
+  background: #ffffff;
+  color: #344054;
+}
+
+.add-history-cancel-button:hover {
+  background: #f7f9fd;
+}
+
+.add-history-submit-button {
+  border: 0;
+
+  background: linear-gradient(
+    135deg,
+    #6d28d9,
+    #8b5cf6
+  );
+
+  color: #ffffff;
+  box-shadow: 0 12px 25px rgba(109, 40, 217, 0.2);
+}
+
+.add-history-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(109, 40, 217, 0.26);
+}
+
+.add-history-cancel-button:disabled,
+.add-history-submit-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ==================== DETAILS STATUS ==================== */
+
+.history-details-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 15px;
+  flex-shrink: 0;
+
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.history-details-status.active {
+  background: #fff1f2;
+  color: #d92d20;
+}
+
+.history-details-status.recovered {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.history-details-status.chronic {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+.history-details-status.under-treatment {
+  background: #eff8ff;
+  color: #175cd3;
+}
+
+.history-details-status.unknown {
+  background: #f2f4f7;
+  color: #667085;
+}
+
+/* ==================== DETAILS CONTENT ==================== */
+
+.history-details-card {
+  margin-bottom: 24px;
+}
+
+.history-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.history-detail-item {
+  min-width: 0;
+  padding: 18px;
+
+  border: 1px solid #e0e7f1;
+  border-radius: 13px;
+  background: #f7f9fd;
+}
+
+.history-detail-item span {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #7a8699;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.history-detail-item strong {
+  display: block;
+  overflow-wrap: anywhere;
+
+  color: #182230;
+
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.history-detail-item .hereditary-yes {
+  color: #6d28d9;
+}
+
+.history-details-text {
+  min-height: 90px;
+  padding: 18px;
+
+  border: 1px solid #e0e7f1;
+  border-radius: 13px;
+  background: #f7f9fd;
+  color: #475467;
+
+  font-size: 0.8rem;
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+.history-details-text + .history-details-text {
+  margin-top: 15px;
+}
+
+/* ==================== DETAILS ACTIONS ==================== */
+
+.history-details-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.history-details-manager-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.history-details-back-button,
+.history-details-edit-button,
+.history-details-delete-button {
+  min-height: 48px;
+  padding: 0 20px;
+
+  border-radius: 10px;
+
+  font-size: 0.75rem;
+  font-weight: 750;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.history-details-back-button {
+  border: 1px solid #d5e1f1;
+  background: #ffffff;
+  color: #344054;
+}
+
+.history-details-back-button:hover {
+  background: #f7f9fd;
+}
+
+.history-details-edit-button {
+  border: 0;
+
+  background: linear-gradient(
+    135deg,
+    #6d28d9,
+    #8b5cf6
+  );
+
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(109, 40, 217, 0.18);
+}
+
+.history-details-edit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(109, 40, 217, 0.24);
+}
+
+.history-details-delete-button {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+.history-details-delete-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: #fca5a5;
+  background: #fee2e2;
+}
+
+.history-details-back-button:disabled,
+.history-details-edit-button:disabled,
+.history-details-delete-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==================== DETAILS STATE ==================== */
+
+.history-details-state {
+  min-height: 380px;
+  padding: 40px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border: 1px solid #d5e1f1;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #667085;
+
+  text-align: center;
+}
+
+.history-details-state strong {
+  margin-top: 15px;
+  color: #344054;
+  font-size: 0.9rem;
+}
+
+.history-details-state .history-details-back-button {
+  margin-top: 20px;
+}
+
+.history-details-empty-icon {
+  font-size: 2.3rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 900px) {
+  .history-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .add-history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-history-field-full {
+    grid-column: auto;
+  }
+
+  .history-details-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .history-details-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .history-details-manager-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .add-history-page-header,
+  .history-details-header {
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  .add-history-page-header h2,
+  .history-details-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .add-history-card,
+  .history-details-card {
+    padding: 23px 18px;
+    border-radius: 16px;
+  }
+
+  .add-history-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .history-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-details-actions {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .history-details-manager-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .add-history-cancel-button,
+  .add-history-submit-button,
+  .history-details-back-button,
+  .history-details-edit-button,
+  .history-details-delete-button {
+    width: 100%;
+  }
+}

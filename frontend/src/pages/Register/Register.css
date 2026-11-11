@@ -1,0 +1,166 @@
+/* ==================== REGISTER PAGE ==================== */
+
+.register-page {
+  grid-template-columns: minmax(390px, 40%) 1fr;
+}
+
+.register-form-section {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  overflow-y: auto;
+}
+
+.register-form-wrapper {
+  max-width: 690px;
+  padding: 32px 37px;
+}
+
+.register-header {
+  margin-bottom: 22px;
+}
+
+.register-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+.register-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.full-width-field {
+  grid-column: 1 / -1;
+}
+
+.optional-label {
+  margin-left: 6px;
+  color: #aaa6b7;
+  font-size: 0.58rem;
+  font-weight: 600;
+}
+
+.register-form .form-group {
+  margin-bottom: 16px;
+}
+
+/* Date input */
+
+.register-form input[type="date"] {
+  color: #77728b;
+}
+
+.register-form input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+/* Age and role preview */
+
+.role-preview {
+  margin-top: 8px;
+  padding: 8px 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  border: 1px solid;
+  border-radius: 10px;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.manager-role {
+  border-color: rgba(34, 184, 116, 0.18);
+  background: rgba(34, 184, 116, 0.08);
+  color: #159263;
+}
+
+.viewer-role {
+  border-color: rgba(118, 87, 255, 0.16);
+  background: rgba(118, 87, 255, 0.07);
+  color: #6e54d5;
+}
+
+.register-terms {
+  align-items: flex-start;
+  margin-top: 2px;
+  line-height: 1.55;
+}
+
+.register-terms .custom-checkbox {
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.register-terms a {
+  color: var(--auth-purple);
+  font-weight: 750;
+}
+
+.register-terms a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1100px) {
+  .register-page {
+    grid-template-columns: minmax(340px, 36%) 1fr;
+  }
+
+  .register-page .auth-trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .register-page {
+    display: block;
+  }
+
+  .register-page .auth-info {
+    display: none;
+  }
+
+  .register-form-section {
+    min-height: 100vh;
+    padding: 25px 20px 35px;
+  }
+
+  .register-form-wrapper {
+    margin: auto;
+  }
+
+  .register-form-wrapper .mobile-auth-brand {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 620px) {
+  .register-form-wrapper {
+    max-width: 500px;
+    padding: 28px 22px;
+  }
+
+  .register-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width-field {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .register-form-section {
+    padding: 14px 10px 25px;
+  }
+
+  .register-form-wrapper {
+    padding: 25px 17px;
+    border-radius: 20px;
+  }
+}

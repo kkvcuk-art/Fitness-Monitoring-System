@@ -1,0 +1,372 @@
+/* Members and Dashboard layout styles */
+
+@import "./Members.css";
+
+/* =========================================================
+   ADD FAMILY MEMBER PAGE
+   File: src/pages/Members/AddMember.css
+   ========================================================= */
+
+/* ==================== PAGE HEADER ==================== */
+
+.add-member-header {
+  min-height: 135px;
+  padding: 28px 30px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--border, #dce8eb);
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 92% 15%,
+      rgba(20, 125, 146, 0.12),
+      transparent 25%
+    ),
+    var(--white, #ffffff);
+
+  box-shadow: 0 8px 25px rgba(16, 38, 61, 0.055);
+}
+
+.add-member-back {
+  display: inline-flex;
+  margin-bottom: 10px;
+
+  color: var(--primary, #147d92);
+  font-size: 0.62rem;
+  font-weight: 750;
+}
+
+.add-member-back:hover {
+  text-decoration: underline;
+}
+
+.add-member-header h2 {
+  margin: 0;
+
+  color: var(--dark, #10263d);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 850;
+}
+
+.add-member-header p {
+  max-width: 620px;
+  margin: 8px 0 0;
+
+  color: var(--text, #5f6f7f);
+  font-size: 0.72rem;
+  line-height: 1.65;
+}
+
+/* ==================== FORM ==================== */
+
+.add-member-form {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-member-form-section {
+  padding: 25px;
+
+  border: 1px solid var(--border, #dce8eb);
+  border-radius: 17px;
+
+  background: var(--white, #ffffff);
+  box-shadow: 0 8px 25px rgba(16, 38, 61, 0.055);
+}
+
+/* ==================== SECTION HEADING ==================== */
+
+.add-form-section-heading {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  border-bottom: 1px solid var(--border-light, #eaf1f3);
+}
+
+.add-form-section-heading > span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: var(--primary-light, #e8f6f7);
+  color: var(--primary, #147d92);
+
+  font-size: 0.59rem;
+  font-weight: 850;
+}
+
+.add-form-section-heading h3 {
+  margin: 0;
+
+  color: var(--dark, #10263d);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.add-form-section-heading p {
+  margin: 5px 0 0;
+
+  color: var(--muted, #8c99a6);
+  font-size: 0.61rem;
+  line-height: 1.5;
+}
+
+/* ==================== FORM GRID ==================== */
+
+.add-member-fields-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.add-member-field {
+  min-width: 0;
+}
+
+.add-member-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.add-member-field label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--dark, #10263d);
+  font-size: 0.62rem;
+  font-weight: 750;
+}
+
+.add-member-field input,
+.add-member-field select {
+  width: 100%;
+  min-height: 45px;
+  padding: 0 13px;
+
+  border: 1px solid var(--border, #dce8eb);
+  border-radius: 10px;
+  outline: none;
+
+  background: var(--page-bg, #f6fafb);
+  color: var(--dark, #10263d);
+
+  font-family: inherit;
+  font-size: 0.65rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.add-member-field input::placeholder {
+  color: var(--muted, #8c99a6);
+}
+
+.add-member-field input:focus,
+.add-member-field select:focus {
+  border-color: var(--primary, #147d92);
+  background: var(--white, #ffffff);
+
+  box-shadow: 0 0 0 4px rgba(20, 125, 146, 0.09);
+}
+
+.add-member-field input:disabled,
+.add-member-field select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ==================== RELATIONSHIP HELP ==================== */
+
+.relationship-help {
+  margin: 17px 0 0;
+  padding: 11px 13px;
+
+  border: 1px solid rgba(47, 128, 237, 0.15);
+  border-radius: 10px;
+
+  background: var(--info-light, #ebf4ff);
+  color: var(--info, #2f80ed);
+
+  font-size: 0.59rem;
+  line-height: 1.6;
+}
+
+/* ==================== MESSAGE ==================== */
+
+.add-member-message {
+  padding: 13px 15px;
+
+  border: 1px solid rgba(214, 69, 93, 0.22);
+  border-radius: 11px;
+
+  background: var(--danger-light, #fff0f3);
+  color: var(--danger, #d6455d);
+
+  font-size: 0.63rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+/* ==================== FORM ACTIONS ==================== */
+
+.add-member-form-actions {
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 11px;
+
+  border: 1px solid var(--border, #dce8eb);
+  border-radius: 15px;
+
+  background: var(--white, #ffffff);
+}
+
+.add-member-cancel,
+.add-member-submit {
+  min-height: 42px;
+  padding: 0 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 0.65rem;
+  font-weight: 750;
+}
+
+.add-member-cancel {
+  border: 1px solid var(--border, #dce8eb);
+
+  background: var(--white, #ffffff);
+  color: var(--text, #5f6f7f);
+}
+
+.add-member-submit {
+  border: 0;
+
+  background: var(--primary, #147d92);
+  color: var(--white, #ffffff);
+
+  box-shadow: 0 10px 23px rgba(20, 125, 146, 0.2);
+  cursor: pointer;
+}
+
+.add-member-submit:hover:not(:disabled) {
+  background: var(--primary-hover, #0f6678);
+}
+
+.add-member-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ==================== VIEW-ONLY PAGE ==================== */
+
+.add-member-denied {
+  min-height: 420px;
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border, #dce8eb);
+  border-radius: 18px;
+
+  background: var(--white, #ffffff);
+  text-align: center;
+}
+
+.add-member-denied > span {
+  margin-bottom: 13px;
+  font-size: 2rem;
+}
+
+.add-member-denied h2 {
+  margin: 0;
+
+  color: var(--dark, #10263d);
+  font-size: 1.4rem;
+}
+
+.add-member-denied p {
+  max-width: 400px;
+  margin: 9px 0 18px;
+
+  color: var(--muted, #8c99a6);
+  font-size: 0.67rem;
+  line-height: 1.6;
+}
+
+.add-member-denied a {
+  min-height: 40px;
+  padding: 0 15px;
+
+  display: inline-flex;
+  align-items: center;
+
+  border-radius: 9px;
+
+  background: var(--primary, #147d92);
+  color: var(--white, #ffffff);
+
+  font-size: 0.63rem;
+  font-weight: 750;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 700px) {
+  .add-member-header {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .add-member-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-member-field.full-width {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .add-member-form-section {
+    padding: 20px 16px;
+  }
+
+  .add-member-form-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .add-member-cancel,
+  .add-member-submit {
+    width: 100%;
+  }
+}

@@ -1,0 +1,154 @@
+:root {
+  /* ==================== CORE BRAND ==================== */
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-dark: #173fa5;
+  --primary-light: #e8f0ff;
+
+  --secondary: #7c3aed;
+  --secondary-hover: #6d28d9;
+  --secondary-light: #f0eaff;
+
+  --accent: #06b6d4;
+  --accent-hover: #0891b2;
+  --accent-light: #e3faff;
+
+  --pink: #ec4899;
+  --pink-light: #fde7f3;
+
+  /* ==================== DARK SECTIONS ==================== */
+
+  --dark: #081426;
+  --dark-secondary: #101f38;
+  --dark-card: #162744;
+  --dark-border: rgba(255, 255, 255, 0.12);
+
+  /* ==================== TEXT ==================== */
+
+  --heading: #081426;
+  --text: #475569;
+  --muted: #7b8798;
+  --white: #ffffff;
+
+  --dark-text: #f8fafc;
+  --dark-muted: #a7b4c7;
+
+  /* ==================== BACKGROUNDS ==================== */
+
+  --page-bg: #f4f7fc;
+  --light-bg: #edf2fa;
+  --card-bg: #ffffff;
+
+  /* Keep compatibility with existing CSS */
+
+  --border: #d7e0ee;
+  --border-light: #e8edf5;
+
+  /* ==================== STATUS ==================== */
+
+  --success: #10b981;
+  --success-light: #e5f9f1;
+
+  --warning: #f59e0b;
+  --warning-light: #fff5dc;
+
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --danger-light: #fee9e9;
+
+  --info: #2563eb;
+  --info-light: #e8f0ff;
+
+  /* ==================== GRADIENTS ==================== */
+
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      #2563eb 0%,
+      #7c3aed 100%
+    );
+
+  --gradient-electric:
+    linear-gradient(
+      135deg,
+      #06b6d4 0%,
+      #2563eb 48%,
+      #7c3aed 100%
+    );
+
+  --gradient-accent:
+    linear-gradient(
+      135deg,
+      #7c3aed 0%,
+      #ec4899 100%
+    );
+
+  --gradient-dark:
+    linear-gradient(
+      145deg,
+      #081426 0%,
+      #111e38 55%,
+      #172554 100%
+    );
+
+  --gradient-health:
+    linear-gradient(
+      135deg,
+      #06b6d4 0%,
+      #2563eb 100%
+    );
+
+  /* ==================== GLASS EFFECTS ==================== */
+
+  --glass-light:
+    rgba(255, 255, 255, 0.72);
+
+  --glass-dark:
+    rgba(15, 31, 56, 0.72);
+
+  --glass-border-light:
+    rgba(255, 255, 255, 0.8);
+
+  --glass-border-dark:
+    rgba(255, 255, 255, 0.14);
+
+  --glass-blur: blur(20px);
+
+  /* ==================== SHADOWS ==================== */
+
+  --shadow-small:
+    0 6px 18px rgba(8, 20, 38, 0.08);
+
+  --shadow:
+    0 16px 40px rgba(8, 20, 38, 0.12);
+
+  --shadow-hover:
+    0 24px 55px rgba(37, 99, 235, 0.2);
+
+  --shadow-primary:
+    0 16px 36px rgba(37, 99, 235, 0.3);
+
+  --shadow-purple:
+    0 16px 40px rgba(124, 58, 237, 0.25);
+
+  --glow-blue:
+    0 0 35px rgba(37, 99, 235, 0.28);
+
+  --glow-purple:
+    0 0 35px rgba(124, 58, 237, 0.24);
+
+  /* ==================== LAYOUT ==================== */
+
+  --container: 1180px;
+
+  --radius-small: 9px;
+  --radius: 16px;
+  --radius-large: 26px;
+  --radius-pill: 999px;
+
+  /* ==================== TRANSITIONS ==================== */
+
+  --transition-fast: 0.2s ease;
+  --transition: 0.3s ease;
+}

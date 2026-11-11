@@ -1,0 +1,58 @@
+{
+  "modelType": "logistic_regression",
+  "version": "1.0.0",
+  "training": {
+    "dataset": "synthetic demonstration data",
+    "samples": 8000,
+    "seed": 42,
+    "note": "Not trained or validated on clinical data. Academic prototype only."
+  },
+  "features": [
+    "heartRate",
+    "spo2",
+    "bodyTemperature",
+    "activityMinutes",
+    "sleepHours",
+    "environmentalTemperature",
+    "humidity",
+    "aqi"
+  ],
+  "scaler": {
+    "mean": [
+      77.91246482012761,
+      96.92193941895934,
+      36.8318304601494,
+      45.69053640319034,
+      6.981056439014697,
+      29.935639837013948,
+      59.59969442893703,
+      89.856726109865
+    ],
+    "scale": [
+      13.899097426846652,
+      1.8890799204997213,
+      0.798215927301676,
+      24.439566963773714,
+      1.509551871005751,
+      6.802054158786213,
+      19.31596097776495,
+      64.26085188736432
+    ]
+  },
+  "classifier": {
+    "weights": [
+      0.39617538567887806,
+      -0.7051482325299151,
+      1.3139220769249078,
+      -0.22259683865716118,
+      -0.15751320802603852,
+      0.6161077486930152,
+      0.3242638933254297,
+      0.8558251576484187
+    ],
+    "bias": -3.8109809985289798
+  },
+  "metrics": {
+    "trainingAccuracy": 0.93725
+  }
+}

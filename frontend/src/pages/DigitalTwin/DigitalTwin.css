@@ -1,0 +1,186 @@
+.digital-twin-container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.twin-header {
+  margin-bottom: 2rem;
+}
+
+.twin-header .badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+}
+
+.twin-header h2 {
+  font-size: 1.85rem;
+  color: #0f172a;
+  margin: 0.5rem 0 0.25rem 0;
+  font-weight: 800;
+}
+
+.twin-header p {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.twin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .twin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.twin-controls-card, .twin-preview-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.twin-controls-card h3, .twin-preview-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.control-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.control-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.control-label strong {
+  color: #2563eb;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  accent-color: #2563eb;
+}
+
+.comparison-banner {
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.compare-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.compare-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.compare-val {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.compare-val.baseline { color: #64748b; }
+.compare-val.simulated { color: #16a34a; }
+
+.compare-arrow {
+  font-size: 1.5rem;
+  color: #94a3b8;
+}
+
+.delta-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.delta-badge.positive {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.delta-badge.negative {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.risk-delta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.delta-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.delta-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.delta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.old-val { color: #94a3b8; text-decoration: line-through; }
+.new-val { color: #0f172a; }
+
+.diff.green {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.twin-insight-footer {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1e40af;
+  line-height: 1.4;
+}

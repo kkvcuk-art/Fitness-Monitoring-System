@@ -1,0 +1,205 @@
+.doctor-container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.doctor-header {
+  margin-bottom: 2rem;
+}
+
+.doctor-header .badge {
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+}
+
+.doctor-header h2 {
+  font-size: 1.85rem;
+  color: #0f172a;
+  margin: 0.5rem 0 0.25rem 0;
+  font-weight: 800;
+}
+
+.doctor-header p {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.specialty-mapping-section {
+  margin-bottom: 2.5rem;
+}
+
+.specialty-mapping-section h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.mapping-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.mapping-card {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mapping-card:hover, .mapping-card.active {
+  border-color: #10b981;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.spec-icon {
+  font-size: 1.5rem;
+}
+
+.risk-indicator {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.risk-indicator.high { background: #fee2e2; color: #991b1b; }
+.risk-indicator.moderate { background: #fef3c7; color: #92400e; }
+.risk-indicator.low { background: #d1fae5; color: #065f46; }
+
+.mapping-card h4 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.mapping-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.hospitals-section h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.active-filter {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.hospitals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.hospital-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hosp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hosp-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.rating-tag {
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.address-text, .phone-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.tags-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.spec-tag {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.hosp-actions {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.maps-route-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #2563eb;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.maps-route-btn:hover {
+  background: #1d4ed8;
+}

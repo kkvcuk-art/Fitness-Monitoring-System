@@ -1,0 +1,244 @@
+.sos-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.sos-modal-container {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.35);
+  border: 3px solid #dc2626;
+  overflow: hidden;
+  animation: sosPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sosPopIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.sos-modal-header {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sos-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sos-badge h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.sos-pulse-icon {
+  font-size: 1.5rem;
+  animation: pulseAlarm 1.2s infinite;
+}
+
+@keyframes pulseAlarm {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.sos-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sos-close-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.sos-modal-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sos-gps-banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 0.85rem 1.2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.sos-maps-link {
+  color: #dc2626;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.sos-retry-gps-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sos-medical-card {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.sos-card-row.headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px dashed #cbd5e1;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sos-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.sos-patient-name {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.sos-blood-box {
+  background: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.sos-blood-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.sos-blood-group {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.sos-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.sos-info-block {
+  background: white;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.sos-info-block.warning {
+  border-left: 4px solid #ef4444;
+  background: #fff5f5;
+}
+
+.sos-info-block.span-2 {
+  grid-column: span 2;
+}
+
+.sos-info-block.emergency {
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+}
+
+.sos-block-title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 0.25rem;
+}
+
+.sos-info-block p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.sos-contact-phone {
+  font-size: 1.1rem;
+  color: #1d4ed8;
+}
+
+.sos-action-bar {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.sos-sms-btn {
+  background: #16a34a;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sos-print-btn {
+  background: #475569;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}

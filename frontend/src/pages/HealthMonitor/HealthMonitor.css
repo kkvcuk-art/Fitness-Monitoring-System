@@ -1,0 +1,676 @@
+/* =========================================================
+   HEALTH MONITOR PAGE
+   Aligned with Risk Prediction design system
+   ========================================================= */
+
+.health-monitor-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 1.5rem;
+}
+
+.health-monitor-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.health-monitor-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.health-monitor-header h1 {
+  margin: 0.5rem 0 0.25rem;
+  color: #0f172a;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.health-monitor-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.back-button:hover {
+  color: #4f46e5;
+}
+
+.monitor-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #c7d2fe;
+  border-radius: 9999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* =========================================================
+   COMMON CARD
+   ========================================================= */
+
+.monitor-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   MEMBER SELECTOR
+   ========================================================= */
+
+.member-selector-card {
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.section-heading h2 {
+  margin: 0 0 0.25rem;
+  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.member-select {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.member-select:hover {
+  border-color: #94a3b8;
+}
+
+.member-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.alert-message {
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.error-message {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.success-message {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* =========================================================
+   MONITOR CONTROL
+   ========================================================= */
+
+.monitor-control-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  background: #f8fafc;
+}
+
+.small-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.monitor-control-card h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.primary-button,
+.secondary-button {
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.primary-button {
+  border: 1px solid #4f46e5;
+  background: linear-gradient(
+    135deg,
+    #4f46e5 0%,
+    #3730a3 100%
+  );
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.primary-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 16px rgba(79, 70, 229, 0.3);
+}
+
+.secondary-button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.secondary-button:hover:not(:disabled) {
+  border-color: #818cf8;
+  color: #4338ca;
+  background: #f8fafc;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   VITAL GRID
+   ========================================================= */
+
+.vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.vital-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 105px;
+  padding: 1.1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.vital-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.vital-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #eef2ff;
+  font-size: 20px;
+}
+
+.vital-info {
+  min-width: 0;
+}
+
+.vital-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.vital-value {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.vital-status {
+  color: #94a3b8;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   VITAL ICON VARIANTS
+   ========================================================= */
+
+.heart-icon {
+  background: #fef2f2;
+}
+
+.spo2-icon {
+  background: #eff6ff;
+}
+
+.temperature-icon {
+  background: #fff7ed;
+}
+
+.activity-icon {
+  background: #f0fdf4;
+}
+
+.sleep-icon {
+  background: #f5f3ff;
+}
+
+.environment-icon {
+  background: #fffbeb;
+}
+
+.humidity-icon {
+  background: #eff6ff;
+}
+
+.aqi-icon {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   LAST UPDATE
+   ========================================================= */
+
+.last-update-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.25rem;
+  background: #f8fafc;
+}
+
+.last-update-card strong {
+  display: block;
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.reading-source {
+  text-align: right;
+}
+
+/* =========================================================
+   HISTORY
+   ========================================================= */
+
+.history-card {
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.table-wrapper {
+  width: 100%;
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.readings-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.readings-table th {
+  padding: 0.75rem 0.8rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.readings-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.readings-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.readings-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.readings-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid #c7d2fe;
+  border-radius: 9999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+/* =========================================================
+   EMPTY / LOADING
+   ========================================================= */
+
+.loading-message,
+.empty-message {
+  padding: 2rem 0;
+  color: #64748b;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.empty-message p {
+  margin: 0 0 1rem;
+}
+
+.empty-history {
+  padding: 3rem 1.25rem;
+  text-align: center;
+}
+
+.empty-history-icon {
+  margin-bottom: 0.75rem;
+  font-size: 2.5rem;
+}
+
+.empty-history h3 {
+  margin: 0 0 0.4rem;
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.empty-history p {
+  max-width: 480px;
+  margin: 0 auto 1.25rem;
+  color: #64748b;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SIMULATION NOTICE
+   ========================================================= */
+
+.simulation-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  background: #eef2ff;
+}
+
+.notice-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.simulation-notice strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #3730a3;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.simulation-notice p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .vitals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .health-monitor-header {
+    flex-direction: column;
+  }
+
+  .monitor-status {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .health-monitor-page {
+    padding: 1rem;
+  }
+
+  .health-monitor-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .monitor-control-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .monitor-control-card .primary-button {
+    width: 100%;
+  }
+
+  .last-update-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reading-source {
+    text-align: left;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .history-card .secondary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .vitals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-selector-card,
+  .history-card {
+    padding: 1.1rem;
+  }
+
+  .vital-card {
+    min-height: 95px;
+  }
+}
+
+@media (max-width: 450px) {
+  .health-monitor-page {
+    padding: 0.75rem;
+  }
+
+  .health-monitor-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .monitor-card {
+    border-radius: 14px;
+  }
+
+  .vital-card {
+    padding: 0.9rem;
+  }
+
+  .vital-icon {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+}
+/* Edge AI local inference */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.sensor-status-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #dbe4ee;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.sensor-status-card strong,
+.sensor-status-card span { display: flex; align-items: center; min-height: 32px; }
+.sensor-note { margin-top: 12px; font-size: 0.85rem; color: #64748b; }
+
+/* Phase 5: personalized environment + health fusion */
+.risk-factors ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.risk-factors li {
+  margin: 6px 0;
+}
+
+/* Phase 7: offline-first resilience */
+.offline-status-card { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin:0 0 1.25rem; padding:14px 16px; border-radius:14px; border:1px solid #dbeafe; background:#eff6ff; color:#1e3a8a; }
+.offline-status-card.offline { border-color:#fed7aa; background:#fff7ed; color:#9a3412; }
+.offline-status-card > div:first-child { display:flex; flex-direction:column; gap:4px; }
+.offline-status-card span { font-size:.82rem; font-weight:600; opacity:.85; }
+.offline-status-meta { display:flex; gap:12px; flex-wrap:wrap; font-size:.78rem; font-weight:800; }
+@media (max-width: 720px) { .offline-status-card { align-items:flex-start; flex-direction:column; } }
+
+.device-type-label { display:flex; align-items:center; gap:10px; margin-top:10px; font-weight:600; }
+.device-type-label select { padding:7px 10px; border-radius:8px; border:1px solid #cbd5e1; background:#fff; }

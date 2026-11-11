@@ -1,0 +1,13 @@
+{
+  "name": "fitness-monitoring-system",
+  "version": "1.0.0",
+  "description": "Family Health & Fitness Monitoring System Root Runner",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "npx concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

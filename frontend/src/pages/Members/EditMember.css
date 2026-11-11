@@ -1,0 +1,44 @@
+/* Reuse Add Member, Members and Dashboard styles */
+
+@import "./AddMember.css";
+
+/* =========================================================
+   EDIT MEMBER PAGE
+   File: src/pages/Members/EditMember.css
+   ========================================================= */
+
+.add-member-field textarea {
+  width: 100%;
+  min-height: 105px;
+  padding: 12px 13px;
+
+  resize: vertical;
+
+  border: 1px solid var(--border, #dce8eb);
+  border-radius: 10px;
+  outline: none;
+
+  background: var(--page-bg, #f6fafb);
+  color: var(--dark, #10263d);
+
+  font-family: inherit;
+  font-size: 0.65rem;
+  line-height: 1.6;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.add-member-field textarea:focus {
+  border-color: var(--primary, #147d92);
+  background: var(--white, #ffffff);
+
+  box-shadow: 0 0 0 4px rgba(20, 125, 146, 0.09);
+}
+
+.add-member-field textarea:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
